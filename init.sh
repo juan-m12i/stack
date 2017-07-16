@@ -19,9 +19,11 @@ export BASE_PROJ=refrd
 export BASE_ENV=$BASE_PROJ
 
 mkdir $HOME/$BASE_ENV/
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-#which virtualenv
-export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+#/usr/bin/python3
+
+export VIRTUALENVWRAPPER_VIRTUALENV=$(which virtualenv)
+#$HOME/.local/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
 export WORKON_HOME=$HOME/$BASE_ENV/.virtualenvs
