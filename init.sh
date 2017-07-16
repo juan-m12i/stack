@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#sudo apt-get update
+sudo apt-get update
 #sudo apt-get -y upgrade
 
 # To review how to avoid GRUB / homelst issue
