@@ -26,7 +26,8 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
 export WORKON_HOME=$HOME/$BASE_ENV/.virtualenvs
 export PROJECT_HOME=$HOME/$BASE_PROJ
-#which virtualenvwrapper.sh
-source /home/ubuntu/.local/bin/virtualenvwrapper.sh
+export LOC_VIRTUALENVWRAPPER=$(which virtualenvwrapper.sh)
+source $LOC_VIRTUALENVWRAPPER
+#/home/ubuntu/.local/bin/virtualenvwrapper.sh
 
 mkvirtualenv $BASE_PROJ
