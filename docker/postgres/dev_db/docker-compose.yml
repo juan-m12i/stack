@@ -1,0 +1,16 @@
+version: '2'
+services:
+  dev_db:
+    image: postgres
+    volumes:
+      - dev-db-vol:/var/lib/postgresql
+    ports:
+      - "33000:5432"
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: docker
+
+volumes:
+  dev-db-vol:
+    external: true
