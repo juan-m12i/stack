@@ -1,0 +1,13 @@
+version: '2'
+services:
+  livezilla:
+    image: jramon76/lz-db
+    volumes:
+      - livezilla-db-vol:/var/lib/mysql
+    ports:
+      - "35080:80"
+      - "35086:3306"
+      
+volumes:
+  livezilla-db-vol:
+    external: true
